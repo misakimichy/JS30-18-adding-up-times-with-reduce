@@ -1,6 +1,6 @@
 (function(){
     const timeNodes = [...document.querySelectorAll('[data-time]')];
-    let seconds = timeNodes.reduce((total, current, index) => {
+    let seconds = timeNodes.reduce((total, current) => {
         let [minutes, seconds] =  current.dataset.time.split(':').map(parseFloat);
         return total += minutes * 60 + seconds;
     }, 0);
